@@ -220,6 +220,10 @@ nav.level:not(:last-child) {
   margin-right: 12px;
 }
 
+.columns .title {
+  margin-bottom: 0.8rem;
+}
+
 .table td:nth-child(2n+1) {
   width: 60%;
 }
