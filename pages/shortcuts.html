@@ -40,83 +40,151 @@
         </div>
       </nav>
       
-      <div class="section">        <!-- USE COLUMNS TO MAXIMIZE SPACE -->
+      <div class="section">
         <div class="container">
-          <div class="title is-4">Application Shortcuts</div>
-            <table class="table">
-              <tr>
-                <td><kbd>⌘</kbd><kbd>,</kbd></td>
-                <td>Settings</td>
-              </tr>
-              <tr>
-                <td><kbd>⌘</kbd><kbd>K</kbd></td>
-                <td>Keyboard Shortcuts</td>
-              </tr>
-              <tr>
-                <td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>D</kbd></td>
-                <td>Reset App Settings</td>
-              </tr>
-              <tr>
-                <td><kbd>⌘</kbd><kbd>L</kbd></td>
-                <td>Log Out</td>
-              </tr>
-              <tr>
-                <td><kbd>⌘</kbd><kbd>H</kbd></td>
-                <td>Hide Zulip</td>
-              </tr>
-              <tr>
-                <td><kbd>Option</kbd><kbd>⌘</kbd><kbd>H</kbd></td>
-                <td>Hide Others</td>
-              </tr>
-              <tr>
-                <td><kbd>⌘</kbd><kbd>Q</kbd></td>
-                <td>Quit Zulip</td>
-              </tr>
-            </table>
+          <div class="columns">
+            <div class="column">
+              <div class="title is-4">Application Shortcuts</div>
+              <table class="table is-fullwidth is-striped">
+                <tr>
+                  <td>Settings</td>
+                  <td><kbd>⌘</kbd><kbd>,</kbd></td>
+                </tr>
+                <tr>
+                  <td>Keyboard Shortcuts</td>
+                  <td><kbd>⌘</kbd><kbd>K</kbd></td>
+                </tr>
+                <tr>
+                  <td>Reset App Settings</td>
+                  <td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>D</kbd></td>
+                </tr>
+                <tr>
+                  <td>Log Out</td>
+                  <td><kbd>⌘</kbd><kbd>L</kbd></td>
+                </tr>
+                <tr>
+                  <td>Hide Zulip</td>
+                  <td><kbd>⌘</kbd><kbd>H</kbd></td>
+                </tr>
+                <tr>
+                  <td>Hide Others</td>
+                  <td><kbd>Option</kbd><kbd>⌘</kbd><kbd>H</kbd></td>
+                </tr>
+                <tr>
+                  <td>Quit Zulip</td>
+                  <td><kbd>⌘</kbd><kbd>Q</kbd></td>
+                </tr>
+              </table>
+              
+              <div class="title is-4">View Shortcuts</div>
+              <table class="table is-fullwidth is-striped">
+                <tr>
+                  <td>Reload</td>
+                  <td><kbd>⌘</kbd><kbd>R</kbd></td>
+                </tr>
+                <tr>
+                  <td>Hard Reload</td>
+                  <td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>R</kbd></td>
+                </tr>
+                <tr>
+                  <td>Enter Full Screen</td>
+                  <td><kbd>Control</kbd><kbd>⌘</kbd><kbd>F</kbd></td>
+                </tr>
+                <tr>
+                  <td>Zoom In</td>
+                  <td><kbd>⌘</kbd><kbd>=</kbd></td>
+                </tr>
+                <tr>
+                  <td>Zoom Out</td>
+                  <td><kbd>⌘</kbd><kbd>-</kbd></td>
+                </tr>
+                <tr>
+                  <td>Actual Size</td>
+                  <td><kbd>⌘</kbd><kbd>0</kbd></td>
+                </tr>
+                <tr>
+                  <td>Toggle Sidebar</td>
+                  <td><kbd>⌘</kbd><kbd>S</kbd></td>
+                </tr>
+                <tr>
+                  <td>Toggle DevTools for Zulip App</td>
+                  <td><kbd>Option</kbd><kbd>⌘</kbd><kbd>I</kbd></td>
+                </tr>
+                <tr>
+                  <td>Toggle DevTools for Active Tab</td>
+                  <td><kbd>Option</kbd><kbd>⌘</kbd><kbd>U</kbd></td>
+                </tr>
+              </table>
+            </div>
+            <div class="column">
+              <div class="title is-4">Edit Shortcuts</div>
+              <table class="table is-fullwidth is-striped">
+                <tr>
+                  <td>Undo</td>
+                  <td><kbd>⌘</kbd><kbd>Z</kbd></td>
+                </tr>
+                <tr>
+                  <td>Redo</td>
+                  <td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>Z</kbd></td>
+                </tr>
+                <tr>
+                  <td>Cut</td>
+                  <td><kbd>⌘</kbd><kbd>X</kbd></td>
+                </tr>
+                <tr>
+                  <td>Copy</td>
+                  <td><kbd>⌘</kbd><kbd>C</kbd></td>
+                </tr>
+                <tr>
+                  <td>Paste</td>
+                  <td><kbd>⌘</kbd><kbd>V</kbd></td>
+                </tr>
+                <tr>
+                  <td>Paste and Match Style</td>
+                  <td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>V</kbd></td>
+                </tr>
+                <tr>
+                  <td>Select All</td>
+                  <td><kbd>⌘</kbd><kbd>A</kbd></td>
+                </tr>
+                <tr>
+                  <td>Find</td>
+                  <td><kbd>⌘</kbd><kbd>F</kbd></td>
+                </tr>
+                <tr>
+                  <td>Find Next</td>
+                  <td><kbd>⌘</kbd><kbd>G</kbd></td>
+                </tr>
+                <tr>
+                  <td>Emoji & Symbols</td>
+                  <td><kbd>Control</kbd><kbd>⌘</kbd><kbd>Space</kbd></td>
+                </tr>
+              </table>
+              
+              <div class="title is-4">History Shortcuts</div>
+              <table class="table is-fullwidth is-striped">
+                <tr>
+                  <td>Back</td>
+                  <td><kbd>⌘</kbd><kbd>←</kbd></td>
+                </tr>
+                <tr>
+                  <td>Forward</td>
+                  <td><kbd>⌘</kbd><kbd>→</kbd></td>
+                </tr>
+              </table>
 
-          <div class="title is-4">Edit Shortcuts</div>
-            <table>
-              <tr>
-                <td><kbd>⌘</kbd><kbd>Z</kbd></td>
-                <td>Undo</td>
-              </tr>
-              <tr>
-                <td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>Z</kbd></td>
-                <td>Redo</td>
-              </tr>
-              <tr>
-                <td><kbd>⌘</kbd><kbd>X</kbd></td>
-                <td>Cut</td>
-              </tr>
-              <tr>
-                <td><kbd>⌘</kbd><kbd>C</kbd></td>
-                <td>Copy</td>
-              </tr>
-              <tr>
-                <td><kbd>⌘</kbd><kbd>V</kbd></td>
-                <td>Paste</td>
-              </tr>
-              <tr>
-                <td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>V</kbd></td>
-                <td>Paste and Match Style</td>
-              </tr>
-              <tr>
-                <td><kbd>⌘</kbd><kbd>A</kbd></td>
-                <td>Select All</td>
-              </tr>
-              <tr>
-                <td><kbd>⌘</kbd><kbd>F</kbd></td>
-                <td>Find</td>
-              </tr>
-              <tr>
-                <td><kbd>⌘</kbd><kbd>G</kbd></td>
-                <td>Find Next</td>
-              </tr>
-              <tr>
-                <td><kbd>Control</kbd><kbd>⌘</kbd><kbd>Space</kbd></td>
-                <td>Emoji & Symbols</td>
-              </tr>
-            </table>
+              <div class="title is-4">Window Shortcuts</div>
+              <table class="table is-fullwidth is-striped">
+                <tr>
+                  <td>Minimize</td>
+                  <td><kbd>⌘</kbd><kbd>M</kbd></td>
+                </tr>
+                <tr>
+                  <td>Close</td>
+                  <td><kbd>⌘</kbd><kbd>W</kbd></td>
+                </tr>
+              </table>
+            </div>
         </div>
       </div>
     </div>
