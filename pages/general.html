@@ -189,7 +189,7 @@
               </div>
               <div class="level-right">
                 <div class="level-item">
-                  <a class="button is-danger">Reset Data</a>
+                  <a class="button is-danger" onclick="showModal();">Reset Data</a>
                 </div>
               </div>
             </nav>
@@ -197,5 +197,55 @@
         </div>
       </section>
     </div>
+    
+    <div id="modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Are you sure?</p>
+          <button class="delete"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="content is-medium">
+            <p>
+              By clicking proceed you will be removing all added accounts and preferences from Zulip. When the application restarts, it will be as if you are starting Zulip for the first time.
+            </p>
+            <small>Note: This action cannot be undone.</small>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button id="reset" class="button is-danger">Reset</button><button id="cancel" class="button">Cancel</button>
+        </footer>
+      </div>
+    </div>
+    
+    <script>
+      var modal = document.getElementById('modal');
+      
+      var reset = document.getElementById('reset');
+      var cancel = document.getElementById('cancel');
+      modalClose = document.getElementsByClassName('delete')[0];
+      
+      reset.addEventListener('click', fauxReset);
+      cancel.addEventListener('click', hideModal);
+      modalClose.addEventListener('click', hideModal);
+      
+      function showModal() {
+        modal.classList.add('is-active');
+      }
+      
+      function hideModal() {
+        modal.classList.remove('is-active');
+      }
+      
+      function fauxReset() {
+        reset.classList.add('is-loading');
+        setTimeout(() => {
+          reset.classList.remove('is-loading');
+          hideModal();
+          window.location.reload(true);
+        }, 2000);
+      }
+    </script>
   </body>
 </HTML>
