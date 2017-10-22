@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+	</head>
+	<body>
+		<div class="sidebar">
+			<figure class="image is-48x48">
+				<img src="https://chat.zulip.org/static/images/logo/apple-touch-icon-precomposed.png" alt="Placeholder image">
+			</figure>
+			<figure class="image">
+				<i class="fa fa-plus-square-o fa-2x"></i>
+			</figure>
+			
+			<figure class="image">
+				<i class="fa fa-refresh fa-2x"></i>
+			</figure>
+			<figure class="image">
+				<i class="fa fa-cog fa-2x"></i>
+			</figure>
+		</div>
+		
+		<div class="offset">
+			<nav class="navbar has-shadow" id="sticky">
+				<div class="container">
+					<div class="navbar-menu">
+						<div class="navbar-start">
+							<a class="navbar-item is-tab" href="general.html">General</a>
+							<a class="navbar-item is-tab" href="network.html">Network</a>
+							<a class="navbar-item is-tab is-active" href="#">Servers</a>
+							<a class="navbar-item is-tab" href="shortcuts.html">Shortcuts</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+			<section class="section">
+				<div class="container">
+					<div class="container add-section">
+						<h1 class="title is-5">Add Server</h1>
+							<div class="field">
+								<p class="control">
+									<input class="input" placeholder="Enter the URL of your Zulip organization...">
+								</p>
+							</div>
+							<div class="field">
+								<p class="control">
+									<button class="button is-success" onclick="show();">
+										<span class="icon">
+											<i class="fa fa-plus-square-o"></i>
+										</span>
+										<span>Add</span>
+									</button>
+								</p>
+							</div>
+						</div>
+
+					<div class="container sub-section">
+						<h1 class="title is-5">Existing Servers</h1>
+
+						<div class="card">
+							<div class="card-content">
+								<div class="media">
+									<div class="media-left">
+										<figure class="image is-48x48">
+											<img src="https://chat.zulip.org/static/images/logo/apple-touch-icon-precomposed.png" alt="Placeholder image">
+										</figure>
+									</div>
+									<div class="media-content">
+										<p class="title is-5">Zulip Community</p>
+										<p class="control">
+											<input class="input is-static" value="https://chat.zulip.org" readonly>
+										</p>
+									</div>
+								</div>
+								<div class="content">
+									<p>
+										Welcome to the Zulip development and user community!
+										<br />
+										Join to get a quick Zulip demo, observe a healthy Zulip community, offer feedback to the Zulip core team, or get involved in as a contributor.
+									</p>
+									<button class="button is-danger remove-org" onclick="hide(this);">
+										<span class="icon">
+											<i class="fa fa-minus-square-o"></i>
+										</span>
+										<span>Remove</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-content">
+								<div class="media">
+									<div class="media-left">
+										<figure class="image is-48x48">
+											<img src="https://chat.fhir.org/user_avatars/2/realm/icon.png?version=2" alt="Placeholder image">
+										</figure>
+									</div>
+									<div class="media-content">
+										<p class="title is-5">chat.fhir.org</p>
+										<p class="control">
+											<input class="input is-static" value="https://chat.fhir.org" readonly>
+										</p>
+									</div>
+								</div>
+								<div class="content">
+									<p>
+										FHIR is a platform specification that defines a set of capabilities used across the healthcare process.
+									</p>
+									<ul>
+										<li>
+											Sign in here to chat with the FHIR community.
+										</li>
+										<li>
+											Before joining, please read and make sure you can follow the chat.fhir.org community expectations.
+										</li>
+									</ul>
+									<button class="button is-danger remove-org" onclick="hide(this);">
+										<span class="icon">
+											<i class="fa fa-minus-square-o"></i>
+										</span>
+										<span>Remove</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<script>
+			function hide(e) {
+				e.parentElement.parentElement.parentElement.classList.add('is-hidden');
+			}
+			
+			function show() {
+				var hidden = document.getElementsByClassName('is-hidden');
+				for (var i = 0; i < 1; i++)
+					hidden[i].classList.remove('is-hidden');
+			}
+		</script>
+	</body>
+</HTML>

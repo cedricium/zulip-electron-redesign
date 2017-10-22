@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+	</head>
+	<body>
+		<div class="sidebar">
+			<figure class="image is-48x48">
+				<img src="https://chat.zulip.org/static/images/logo/apple-touch-icon-precomposed.png" alt="Placeholder image">
+			</figure>
+			<figure class="image">
+				<i class="fa fa-plus-square-o fa-2x"></i>
+			</figure>
+			
+			<figure class="image">
+				<i class="fa fa-refresh fa-2x"></i>
+			</figure>
+			<figure class="image">
+				<i class="fa fa-cog fa-2x"></i>
+			</figure>
+		</div>
+		
+		<div class="offset">
+			<nav class="navbar has-shadow" id="sticky">
+				<div class="container">
+					<div class="navbar-menu">
+						<div class="navbar-start">
+							<a class="navbar-item is-tab" href="general.html">General</a>
+							<a class="navbar-item is-tab is-active" href="#">Network</a>
+							<a class="navbar-item is-tab" href="servers.html">Servers</a>
+							<a class="navbar-item is-tab" href="shortcuts.html">Shortcuts</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+			<section class="section">
+				<div class="container">
+					<div class="container sub-section">
+						<h1 class="title is-5">Proxy</h1>
+						<nav class="level">
+							<div class="level-left">
+								<div class="level-item">
+									<p class="subtitle is-5">
+										Connect servers through a proxy.
+									</p>
+								</div>
+							</div>
+							<div class="level-right">
+								<div class="level-item">
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider round"></span>
+									</label>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class="container is-hidden" id="proxy-input-field">
+						<div class="field is-horizontal">
+							<div class="field-label is-normal">
+								<label class="label">PAC script</label>
+							</div>
+							<div class="field-body">
+								<div class="field">
+									<div class="control stunted">
+										<input class="input" type="text" placeholder="e.g. foobar.com/pacfile.js">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="field is-horizontal">
+							<div class="field-label is-normal">
+								<label class="label">Proxy rules</label>
+							</div>
+							<div class="field-body">
+								<div class="field">
+									<div class="control stunted">
+										<input class="input" type="text" placeholder="e.g. http=foopy:80;ftp=foopy2">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="field is-horizontal">
+							<div class="field-label is-normal">
+								<label class="label">Proxy bypass rules</label>
+							</div>
+							<div class="field-body">
+								<div class="field">
+									<div class="control stunted">
+										<input class="input" type="text" placeholder="e.g. foobar.com">
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="button is-success">
+							<span class="icon">
+								<i class="fa fa-check-square-o"></i>
+							</span>
+							<span>Save</span>
+						</button>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<script type="text/javascript">
+			var toggle = document.querySelector('input[type="checkbox"]');
+			var proxyInputField = document.getElementById('proxy-input-field');
+			toggle.addEventListener('click', function() {
+				if (toggle.checked)
+					proxyInputField.classList.remove('is-hidden');
+				else
+					proxyInputField.classList.add('is-hidden');
+			});
+		</script>
+	</body>
+</HTML>
